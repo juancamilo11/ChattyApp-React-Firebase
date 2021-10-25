@@ -1,6 +1,8 @@
-import firebase from 'firebase';
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/database";
 
-const firebaseConfig = {
+const config = {
     apiKey: "AIzaSyAqwI5bFWgjbgQ1fXsmaC0kfYrdIsbOM5E",
     authDomain: "chatty-sofka-jccc.firebaseapp.com",
     projectId: "chatty-sofka-jccc",
@@ -10,7 +12,7 @@ const firebaseConfig = {
     measurementId: "G-WWVFCFY6B3"
   };
 
-firebase.initializeApp(firebase);
+firebase.initializeApp(config);
 
 export const auth = firebase.auth;
 export const db = firebase.database();
