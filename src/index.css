@@ -5,9 +5,126 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: dimgrey;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+.img-home {
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.container-boton {
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.form-control {
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
+}
+
+.btn-ingresar {
+  background-color: #666;
+  border: 2px solid black;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.btn-ingresar:hover {
+  background-color: #888;
+  outline: 2px solid black;
+  transition: all 0.3s;
+}
+
+.form-control {
+  background-color: rgb(59, 57, 57);
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.form-label {
+  color: #ccc;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+hr {
+  color:#bbb;
+}
+
+.text-button {
+  margin-right: 10px;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+.form-text {
+  color:#ccc;
+}
+
+.form-control {
+  border: 2px solid red;
+}
+
+.input-form {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 50px;
+}
+
+.btn-google {
+  background-color: #db4a39;
+  border: 2px solid black;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.btn-github {
+  background-color: #4078c0;
+  border: 2px solid black;
+  border: none;
+}
+
+.btn-google:hover {
+  background-color: #a82717;
+  outline:2px solid #ccc;
+  transition: all 0.3s;
+}
+
+.btn-logout {
+  text-align: center;
+  align-self: center;
+  position:absolute;
+  right: 10px;
+  top: 65px;
+}
+
+.btn-search {
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  height: 45px;
+  font-weight: 700;
+}
+
+.home-content {
+  padding-left: 20%;
+  width: 60%;
+  padding-right: 20%;
+  text-align: center;
 }

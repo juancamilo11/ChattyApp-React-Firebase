@@ -10,12 +10,14 @@ export default class Chat extends Component {
         chats: [],
         content: '',
         readError: null,
-        writeError: null
+        writeError: null,
+        loadingChats: false
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.myRef = React.createRef();
     }
-    
+
     async componentDidMount() {
       this.setState({ readError: null });
       try {
@@ -53,24 +55,35 @@ export default class Chat extends Component {
     }
 
     render() {
-    return (
-        <div>
-            <div className="chats">
-            {this.state.chats.map(chat => {
-                return <p key={chat.timestamp}>{chat.content}</p>
-            })}
-            </div>
-            {/* message form */}
-            <form onSubmit={this.handleSubmit}>
-            <input onChange={this.handleChange} value={this.state.content}></input>
-            {this.state.error ? <p>{this.state.writeError}</p> : null}
-            <button type="submit">Send</button>
-            </form>
+        return (
             <div>
-            Login in as: <strong>{this.state.user.email}</strong>
+            <div className="chat-area" ref={this.myRef}>
+                {/* loading */}
+                {this.state.loadingChats ? 
+                <div role="status">
+                <span className="sr-only">Loading...</span>
+                </div> : ""}
+                {/* chat area */}
+                {this.state.chats.map(chat => {
+                return <p  key={chat.timestamp} className={"chat-bubble " + (this.state.user.uid === chat.uid ? "current-user" : "")}>
+                    {chat.content} 
+                    <br />
+                    
+                    <br />
+                    <span>{this.state.user.email}</span>
+                </p>
+                })}
+                <form className="mx-3" onSubmit={this.handleSubmit}>
+                <textarea className="form-control" name="content" onChange={this.handleChange} value={this.state.content}></textarea>
+                {this.state.error ? <p>{this.state.error}</p> : null}
+                <button className="btn btn-dark px-5 mt-4" type="submit">Enviar</button>
+                </form>
+                <div className="py-5 mx-3">
+                En sesión: <strong>{this.state.user.email}</strong>
+                </div>
             </div>
-        </div>
+            </div>
         );
-      }
     }
-  }
+}
+

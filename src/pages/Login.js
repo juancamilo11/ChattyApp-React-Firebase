@@ -12,12 +12,12 @@ export default class Login extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.googleSignIn = this.googleSignIn.bind(this);
+	  this.githubSignIn = this.githubSignIn.bind(this);
   }
 
   handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
+    this.setState({[event.target.name]: event.target.value});
   }
 
   async handleSubmit(event) {
@@ -27,6 +27,22 @@ export default class Login extends Component {
       await signin(this.state.email, this.state.password);
     } catch (error) {
       this.setState({ error: error.message });
+    }
+  }
+
+  async googleSignIn() {
+    try {
+        await signInWithGoogle();
+    } catch (error) {
+        this.setState({ error: error.message });
+    }
+  }
+
+  async githubSignIn() {
+    try {
+          await signInWithGitHub();
+    } catch (error) {
+          this.setState({ error: error.message });
     }
   }
 
