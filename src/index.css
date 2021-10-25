@@ -293,3 +293,17 @@ a {
   margin-left:25%;
   margin-right:25%;
 }
+
+.message-content {
+  text-indent:10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.message-separator {
+  width: 50%;
+}
+
+#input-message {
+  margin-left: 0px;
+}

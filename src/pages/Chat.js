@@ -60,7 +60,7 @@ export default class Chat extends Component {
         return (
             <div>
               <PrivateNavbar />
-              <div className="chat-area" ref={this.myRef}>
+              <div className="chat-area container" ref={this.myRef}>
                   {/* loading */}
                   {this.state.loadingChats ? 
                   <div role="status">
@@ -69,19 +69,19 @@ export default class Chat extends Component {
                   {/* chat area */}
                   {this.state.chats.map(chat => {
                   return <p  key={chat.timestamp} className={"chat-bubble " + (this.state.user.uid === chat.uid ? "current-user" : "")}>
-                      {chat.content} 
+                      <p className="message-content">{chat.content}</p> 
                       <br />
-                      
-                      <br />
+                      <p>{new Date(chat.timestamp).toUTCString()}</p>
                       <span>{this.state.user.email}</span>
+                      <hr className="message-separator"/>
                   </p>
                   })}
                   <form className="mx-3" onSubmit={this.handleSubmit}>
-                  <textarea className="form-control" name="content" onChange={this.handleChange} value={this.state.content}></textarea>
+                  <textarea className="form-control" id="input-message" name="content" onChange={this.handleChange} value={this.state.content}></textarea>
                   {this.state.error ? <p>{this.state.error}</p> : null}
                   <button className="btn btn-dark px-5 mt-4" type="submit">Enviar</button>
                   </form>
-                  <div className="py-5 mx-3">
+                  <div className="py-5">
                   En sesión: <strong>{this.state.user.email}</strong>
                   </div>
               </div>
