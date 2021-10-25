@@ -1,26 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import question from '../img/question.png'
-
-export const PublicNavbar = () => (
-  <nav className="navbar">
-      <img className="img-icon" src={question} alt="Icon" style={{width:"35px"}}/>
-      <section className="navlinks">
-        <Link to="/">Home</Link>
-        <Link to="/questions">Questions</Link>
-        <Link to="/login">Login</Link>
-      </section>
-  </nav>
-)
+import img_logo from '../img/chat-img.png'
+import { auth } from '../services/firebase'
 
 export const PrivateNavbar = () => (
   <nav className="navbar">
-      <img className="img-icon" src={question} alt="Icon" style={{width:"35px"}}/>
+      <img className="img-icon" src={img_logo} alt="Icon" style={{width:"50px"}}/>
+      <button className="btn btn-danger" id="btn-salir" onClick={() => auth().signOut()}>salir</button>
     <section>
-      <Link to="/">Home</Link>
-      <Link to="/questions">Questions</Link>
-      <Link to="/new">New</Link>
-      <Link to="/list">List</Link>
     </section>
   </nav>
 )

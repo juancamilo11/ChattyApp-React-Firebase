@@ -81,11 +81,11 @@ export default class SignUp extends Component {
                                     className="form-input input-form"
                                     placeholder="Contraseña" 
                                     onChange={this.handleChange}
-                                    value={this.state.email} />
+                                    value={this.state.password} />
                             </div>
                             <div>
-                              {this.state.error ? <p>{this.state.error}</p> : null}
-                              <button type="submit" className="btn btn-light btn-ingresar"><span className="text-button">Ingresar</span><i class="fas fa-sign-in-alt"></i></button>
+                              {this.state.error ? <p className="form-text">{this.state.error}</p> : null}
+                              <button type="submit" className="btn btn-light btn-ingresar"><span className="text-button">Crear cuenta</span><i class="fas fa-user-plus"></i></button>
                             </div>
                             <p className="text-center mt-3 form-label">O también puedes:</p> <hr />
                             <button onClick={this.googleSignIn} type="button" className="btn btn-light btn-ingresar btn-google">
@@ -103,37 +103,4 @@ export default class SignUp extends Component {
         </div>
     )
   }
-
-  // render() {
-  //   return (
-  //     <div>
-  //       <form onSubmit={this.handleSubmit}>
-  //         <h1>
-  //           Sign Up to
-  //         <Link to="/">Chatty</Link>
-  //         </h1>
-  //         <p>Fill in the form below to create an account.</p>
-  //         <div>
-  //           <input placeholder="Email" name="email" type="email" onChange={this.handleChange} value={this.state.email}></input>
-  //         </div>
-  //         <div>
-  //           <input placeholder="Password" name="password" onChange={this.handleChange} value={this.state.password} type="password"></input>
-  //         </div>
-  //         <div>
-  //           {this.state.error ? <p>{this.state.error}</p> : null}
-  //           <button type="submit">Sign up</button>
-  //         </div>
-  //         <p>Or</p>
-  //         <button onClick={this.googleSignIn} type="button">
-  //         Sign up with Google
-  //         </button>
-  //         <button type="button" onClick={this.githubSignIn}>
-  //           Sign up with GitHub
-  //         </button>
-  //         <hr></hr>
-  //         <p>Already have an account? <Link to="/login">Login</Link></p>
-  //       </form>
-  //     </div>
-  //   )
-  // }
 }

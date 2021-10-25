@@ -49,49 +49,48 @@ export default class Login extends Component {
   render() {
     return (
       <div>
-        <form
-          autoComplete="off"
-          onSubmit={this.handleSubmit}
-        >
-          <h1>
-            Login to
-            <Link to="/">
-              Chatty
-            </Link>
-          </h1>
-          <p>
-            Fill in the form below to login to your account.
-          </p>
-          <div>
-            <input
-              placeholder="Email"
-              name="email"
-              type="email"
-              onChange={this.handleChange}
-              value={this.state.email}
-            />
-          </div>
-          <div>
-            <input
-              placeholder="Password"
-              name="password"
-              onChange={this.handleChange}
-              value={this.state.password}
-              type="password"
-            />
-          </div>
-          <div>
-            {this.state.error ? (
-              <p>{this.state.error}</p>
-            ) : null}
-            <button type="submit">Login</button>
-          </div>
-          <hr />
-          <p>
-            Don't have an account? <Link to="/signup">Sign up</Link>
-          </p>
-        </form>
-      </div>
+            <div className="sidenav">
+                <div className="login-main-text">
+                    <h3 className="text-center m-4">¡Ingresa a ChattyApp para chatear con todos tus amigos!</h3><br/>
+                </div>
+            </div>
+            <div className="form-control">
+                <div className="form-container">
+                    <div className="login-form">
+                        <form onSubmit={this.handleSubmit} autoComplete="off">
+                            <div className="form-group">
+                                <label className="text-center form-label" htmlFor="login">Correo electrónico</label>
+                                <input 
+                                    type="text" 
+                                    id="login"
+                                    name="email"
+                                    className="form-input input-form" 
+                                    placeholder="Correo electrónico"
+                                    onChange={this.handleChange}
+                                    value={this.state.email} />
+                            </div>
+                            <div class="form-group">
+                                <label className="text-center form-label" htmlFor="password">Contraseña</label>
+                                <input 
+                                    type="password" 
+                                    id="password"
+                                    name="password"
+                                    className="form-input input-form"
+                                    placeholder="Contraseña" 
+                                    onChange={this.handleChange}
+                                    value={this.state.email} />
+                            </div>
+                            <div>
+                              {this.state.error ? <p className="form-text">{this.state.error}</p> : null}
+                              <button type="submit" className="btn btn-light btn-ingresar"><span className="text-button">Ingresar</span><i class="fas fa-sign-in-alt"></i></button>
+                            </div>
+                            <hr></hr>
+                            ¿No tienes una cuenta? <Link to="/signup">Create una cuenta</Link>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
   }
 }

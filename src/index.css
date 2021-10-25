@@ -128,3 +128,42 @@ hr {
   padding-right: 20%;
   text-align: center;
 }
+
+
+nav {
+  display: inline-flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  background: #111;
+}
+
+nav section {
+  width: 100%;
+}
+
+nav a {
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+}
+
+nav a:first-of-type {
+  margin-left: -1.5rem;
+}
+
+nav a:hover {
+  background: #222;
+}
+
+a {
+  color: #ea3546;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  margin-right: 80%;
+}
+
+#btn-salir {
+  margin-right: 10px;
+}
