@@ -39,6 +39,7 @@ code {
   width: 30%;
   margin-left: 35%;
   margin-right: 35%;
+  font-size: 0.8rem;
 }
 
 .btn-ingresar:hover {
@@ -306,4 +307,11 @@ a {
 
 #input-message {
   margin-left: 0px;
+}
+
+
+.btn-ingreso {
+  width: 100%;
+  margin-left: -50px;
+  margin-right: -50px;
 }

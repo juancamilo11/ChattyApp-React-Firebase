@@ -78,7 +78,7 @@ export default class Login extends Component {
                                     className="form-input input-form"
                                     placeholder="Contraseña" 
                                     onChange={this.handleChange}
-                                    value={this.state.email} />
+                                    value={this.state.password} />
                             </div>
                             <div>
                               {this.state.error ? <p className="form-text">{this.state.error}</p> : null}

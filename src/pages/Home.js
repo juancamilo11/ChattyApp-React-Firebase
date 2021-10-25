@@ -11,8 +11,8 @@ export default class HomePage extends Component {
           <h3 className="subtitulo text-center">¿Cómo comenzar?</h3>
         </div>
         <div className="text-center container-boton">
-          <Link className="btn btn-primary form-control mb-3 mt-3" to = "/signup">Crea tu Cuenta</Link>
-          <Link className="btn btn-primary form-control" to = "/login">Ingresar</Link>
+          <Link className="btn btn-primary form-control mb-3 mt-3 btn-ingreso" to="/signup">Crea tu Cuenta</Link>
+          <Link className="btn btn-primary form-control btn-ingreso" to = "/login">Ingresar</Link>
         </div>
       </div>
     )
