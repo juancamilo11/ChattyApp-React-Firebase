@@ -11,6 +11,6 @@ El aprendiz aplica conocimientos base para evidenciar experiencia en el uso de a
 
 Criterios:
 Crear una aplicación en firebase
-Entregar en un repositorio github el código diseñado 
+Entregar en un repositorio github el código diseñado: https://github.com/juancamilo11/ChattyApp-React-Firebase
 Hacer pruebas que garanticen las funcionalidades  
-Entregar la URL de la solución
+Entregar la URL de la solución: https://chatty-sofka-jccc.web.app/
